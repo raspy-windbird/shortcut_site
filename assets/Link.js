@@ -3,6 +3,7 @@
  */
 export class Link {
     constructor(...href){
+        const newhref = [];
         for (let i in href) {
             newhref[i] = "https://"+href[i];
         }
