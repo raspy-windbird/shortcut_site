@@ -2,13 +2,16 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Shortcut Manager</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Shortcut Dashboard</title>
+    <link rel="stylesheet" href="./style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/shortcutjs/shortcut.min.js"></script>
-    <script type="module" src="src/router.js" defer></script>
 </head>
 <body>
-    <h1>ショートカット</h1>
-    <div id="app"></div>
+    <nav>
+        <a href="#/">ホーム</a> |
+        <a href="#/settings">設定</a>
+    </nav>
+    <main id="app"></main>
+    <script type="module" src="./src/app.js"></script>
 </body>
 </html>

@@ -1,9 +1,21 @@
-console.log('[Router] initialized');
+import { Home } from './pages/home.js';
+import { Settings } from './pages/settings.js';
 
-import { loadShortcuts, saveShortcut, handleShortcutKey } from './shortcutManager.js';
+export function router() {
+  const path = location.hash.slice(1) || '/';
+  const app = document.getElementById('app');
+  app.innerHTML = ''; // 先にクリア
 
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('[Router] DOM loaded');
-    loadShortcuts();
-    document.addEventListener('keydown', handleShortcutKey);
-});
+  switch (path) {
+    case '/':
+      app.appendChild(Home());
+      break;
+    case '/settings':
+      app.appendChild(Settings());
+      break;
+    default:
+      const notFound = document.createElement('div');
+      notFound.innerHTML = '<h2>404 - ページが見つかりません</h2>';
+      app.appendChild(notFound);
+  }
+}
