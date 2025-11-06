@@ -4,7 +4,7 @@ import { registerShortcut } from "./assets/Shortcut.js";
 
 //init
 const nomallink = hasCOOKie("link");
-console.log(nomallink);//test
+console.log(nomallink);//test　[]が返ってくる
 const newlink = new Link(nomallink);
 console.log(newlink);//test
 

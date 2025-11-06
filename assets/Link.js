@@ -2,7 +2,7 @@
  * 与えられたリンクを成形&開く
  */
 export class Link {
-    constructor(...href){
+    constructor(href){
         console.log("helf: "+href);//test
         const newhref = [];
         for (let i of href) {
