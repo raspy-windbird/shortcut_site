@@ -3,11 +3,12 @@
  */
 export class Link {
     constructor(...href){
+        console.log("Link: "+href);
         const newhref = [];
         for (let i of href) {
-            newhref[i] = "https://"+href[i];
+            newhref = newhref.push("https://"+href[i]);
         }
-        console.log(newhref);//test
+        console.log("newhref: "+newhref);//test
         this.href = newhref;
     }
     open (links = this.href) {
