@@ -10,4 +10,5 @@ const openlink = () => newlink.open();
 console.log(newlink);//test
 
 registerShortcut("Ctrl+G",newlink);
+registerShortcut("Ctrl+G",newlink);
 console.log("finish")
