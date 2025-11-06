@@ -11,7 +11,7 @@ export function hasCOOKie (e) {
 	if (oldcookie) {
 		return oldcookie;
 	} else {
-		const newcookie = "google.com";//入力を促すようにしたい
+		const newcookie = ["google.com","yahoo.co.jp"];//入力を促すようにしたい
 		return newcookie;
 	}
 }
