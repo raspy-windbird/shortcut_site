@@ -5,8 +5,8 @@ import { registerShortcut } from "./assets/Shortcut.js";
 //init
 const nomallink = hasCOOKie("link");
 console.log(nomallink);//test　[]が返ってくる
-const newlink = new Link(nomallink);
+const newlink = new Link(nomallink).open;
 console.log(newlink);//test
 
-registerShortcut("Ctrl+G",newlink.open);
+registerShortcut("Ctrl+G",newlink);
 console.log("finish")
