@@ -15,7 +15,7 @@ export class Link {
     get open () {
         const links = this.href;    
         for (let i in links) {
-            window.open(i,"_blank");
+            window.open(links[i],"_blank");
             console.log("i: "+i+" links[i]: "+links[i]);//test
         }
     }
