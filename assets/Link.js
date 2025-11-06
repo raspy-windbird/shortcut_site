@@ -4,7 +4,7 @@
 export class Link {
     constructor(...href){
         const newhref = [];
-        for (let i in href) {
+        for (let i of href) {
             newhref[i] = "https://"+href[i];
         }
         console.log(newhref);//test
