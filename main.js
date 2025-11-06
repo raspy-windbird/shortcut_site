@@ -9,3 +9,4 @@ const newlink = new Link(nomallink);
 console.log(newlink);//test
 
 registerShortcut("Ctrl+G",newlink.open);
+console.log("finish")
