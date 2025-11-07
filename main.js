@@ -3,11 +3,17 @@ import {hasCOOKie,COOKie,deleteCOOKie} from "./assets/COOKie.js";
 import { registerShortcut } from "./assets/Shortcut.js";
 
 //init
-const nomallink = hasCOOKie("link");
-console.log(nomallink);//test　[]が返ってくる
-const newlink = new Link(nomallink);
-const openlink = () => newlink.open();
-console.log(newlink);//test
+//クラス化しておく
+const cook_google = hasCOOKie("google");
+console.log(cook_google);//test　[]が返ってくる
+const new_google = new Link(cook_google);
 
-registerShortcut("Ctrl+G",openlink);
+//宣言
+const open_google = () => new_google.open();
+console.log(new_google);//test
+
+//登録
+registerShortcut("Ctrl+G",open_google);
+
+
 console.log("finish");
