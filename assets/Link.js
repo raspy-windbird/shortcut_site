@@ -1,3 +1,4 @@
+"use strict"; 
 /**
  * 与えられたリンクを成形&開く
  */
@@ -13,7 +14,7 @@ export class Link {
         this.href = newhref;
     }
     get open () {
-        const links = this.href;    
+        const links = this.href;
         for (let i in links) {
             window.open(links[i],"_blank");
             console.log("i: "+i+" links[i]: "+links[i]);//test

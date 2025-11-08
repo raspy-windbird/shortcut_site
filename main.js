@@ -1,3 +1,5 @@
+"use strict"; 
+
 import {Link} from "./assets/Link.js";
 import {hasCOOKie,COOKie,deleteCOOKie} from "./assets/COOKie.js";
 import { registerShortcut } from "./assets/Shortcut.js";
