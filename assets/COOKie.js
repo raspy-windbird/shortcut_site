@@ -7,7 +7,7 @@
  */
 export function hasCOOKie (e) {
 	const cookie = new COOKie();
-	const oldcookie = cookie.get(e);
+	const oldcookie = cookie.get;
 	
 	console.log(oldcookie);//test
 	if (oldcookie) {
