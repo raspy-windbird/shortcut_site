@@ -6,14 +6,16 @@
  * no : 新規で作成して返す
  */
 export function hasCOOKie (e) {
-	const oldcookie = new COOKie(e).get;
-	console.log(oldcookie);//test
-	if (oldcookie) {
-		return oldcookie;
+	const cookie = new COOKie(e).get;
+	console.log(cookie);//test
+	if (cookie) {
+		console.log("found cookie");
 	} else {
-		const newcookie = ["google.com","yahoo.co.jp"];//入力を促すようにしたい
-		return newcookie;
+		cookie.set("google.com","yahoo.co.jp");//入力を促すようにしたい
+		console.log("not found cookie");//test
+		console.log(cookie.get);//test
 	}
+	return cookie;
 }
 
 /**
