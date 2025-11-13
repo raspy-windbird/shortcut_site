@@ -6,9 +6,11 @@
  * no : 新規で作成して返す
  */
 export function hasCOOKie (e) {
-	const cookie = new COOKie(e).get;
-	console.log(cookie);//test
-	if (cookie) {
+	const cookie = new COOKie();
+	const oldcookie = cookie.get(e);
+	
+	console.log(oldcookie);//test
+	if (oldcookie) {
 		console.log("found cookie");
 	} else {
 		cookie.set("google.com","yahoo.co.jp");//入力を促すようにしたい
